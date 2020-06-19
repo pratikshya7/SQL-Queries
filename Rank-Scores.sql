@@ -26,4 +26,4 @@ For example, given the above Scores table, your query should generate the follow
 
 ###SOLUTION:
 */
-Select Max(Salary) as SecondHighestSalary From Employee Where Salary Not IN ( Select Max(Salary) from Employee)
+SELECT  Score, dense_rank() Over(Order By  Score DESC) as `Rank` from Scores;
