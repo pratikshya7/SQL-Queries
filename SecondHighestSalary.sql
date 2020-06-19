@@ -22,3 +22,7 @@ Where Salary < (SELECT Distinct Salary from Employee Order By Salary Desc Limit 
 Order By Salary Desc
 Limit 1;
 
+/*Another Approach*/
+Select Max(Salary) as SecondHighestSalary From Employee Where Salary Not IN ( Select Max(Salary) from Employee)
+
+
