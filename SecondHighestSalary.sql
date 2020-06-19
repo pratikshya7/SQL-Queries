@@ -16,8 +16,9 @@ For example, given the above Employee table, the query should return 200 as the 
 | 200                 |
 
 ##SOLUTION: 
+*/
 SELECT Salary as SecondHighestSalary From Employee
 Where Salary < (SELECT Distinct Salary from Employee Order By Salary Desc Limit 1)
 Order By Salary Desc
 Limit 1;
-*/
+
