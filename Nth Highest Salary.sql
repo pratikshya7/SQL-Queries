@@ -24,7 +24,6 @@ BEGIN
 Declare Y INT;
 SET Y = N-1;
   RETURN (
-      # Write your MySQL query statement below.
       SELECT Distinct Salary as NthHighestSalary From Employee
       Order By Salary DESC
       Limit 1 Offset Y     
